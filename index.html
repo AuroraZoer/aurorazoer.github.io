@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yiran Zhao (赵怡然), Ph.D. student researching computational neuroscience, cognitive science, and language processing.">
+  <title>Yiran Zhao | Academic Homepage</title>
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/101802289?v=4&amp;s=64">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #fff;
+      --text: #4c4c4c;
+      --heading: #043361;
+      --link: #176d97;
+      --muted: #626873;
+      --rule: #dce1e7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font: 16px/1.55 Georgia, "Songti SC", serif;
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: 232px minmax(0, 650px);
+      gap: clamp(36px, 7vw, 78px);
+      max-width: 1016px;
+      margin: 0 auto;
+      padding: 64px 28px 46px;
+    }
+
+    .profile {
+      position: sticky;
+      top: 64px;
+      align-self: start;
+      padding-top: 10px;
+      text-align: center;
+    }
+
+    .avatar {
+      display: block;
+      width: 116px;
+      height: 116px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--rule);
+    }
+
+    h1, h2 {
+      margin: 0;
+      color: var(--heading);
+      font-weight: normal;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: 30px; }
+
+    .name-local {
+      margin: 4px 0 13px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .role { margin: 0; }
+    .affiliation { margin: 2px 0 13px; }
+
+    .profile-links, .work-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 13px;
+      font-size: 14px;
+    }
+
+    .profile-links { justify-content: center; }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      text-underline-offset: 3px;
+    }
+
+    a:hover, a:focus-visible { text-decoration: underline; }
+
+    main { min-width: 0; }
+    main section + section { margin-top: 29px; }
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 25px;
+    }
+
+    section p { margin: 0; }
+    .interests { margin: 0; padding-left: 1.3em; }
+
+    .works {
+      display: grid;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .works li + li {
+      padding-top: 14px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .work-title {
+      margin: 0 0 3px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .authors, .venue { font-size: 15px; }
+    .authors strong { color: var(--heading); }
+    .venue { color: var(--muted); }
+    .work-links { margin-top: 3px; }
+
+    footer {
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #20212b;
+        --text: #e3e4e9;
+        --heading: #8bd3f5;
+        --link: #88caeb;
+        --muted: #bfc4d0;
+        --rule: #464a5b;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page { grid-template-columns: minmax(0, 1fr); gap: 25px; padding: 30px 22px; }
+      .profile { position: static; padding-top: 0; }
+      .avatar { width: 98px; height: 98px; margin-bottom: 12px; }
+      main { padding-top: 22px; border-top: 1px solid var(--rule); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="profile">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/101802289?v=4&amp;s=240" alt="Yiran Zhao’s GitHub avatar" width="116" height="116">
+      <h1>Yiran Zhao</h1>
+      <p class="name-local" lang="zh-CN">赵怡然</p>
+      <p class="role">Ph.D. Student</p>
+      <p class="affiliation"><a href="https://english.ucas.ac.cn/">University of Chinese Academy of Sciences</a></p>
+      <nav class="profile-links" aria-label="Academic profiles">
+        <a href="https://github.com/AuroraZoer">GitHub</a>
+        <a href="https://orcid.org/0000-0002-7838-3457">ORCID</a>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="about">
+        <h2 id="about">About Me</h2>
+        <p>I’m a Ph.D. student in Control Science and Engineering at the <a href="https://sais.ucas.ac.cn/">School of Advanced Interdisciplinary Studies</a>, University of Chinese Academy of Sciences. I conduct research at the State Key Laboratory of Multimodal Artificial Intelligence Systems, <a href="https://english.ia.cas.cn/">Institute of Automation, Chinese Academy of Sciences</a>.</p>
+      </section>
+
+      <section aria-labelledby="interests">
+        <h2 id="interests">Research Interests</h2>
+        <ul class="interests">
+          <li>Computational neuroscience and cognitive science</li>
+          <li>Human language processing and its neural basis</li>
+          <li>Neuroimaging and large language models for studying language cognition</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="publications">
+        <h2 id="publications">Publications</h2>
+        <ul class="works">
+          <li>
+            <h3 class="work-title"><a href="https://doi.org/10.1007/978-3-031-70546-5_17">Integrating Dependency Type and Directionality into Adapted Graph Attention Networks to Enhance Relation Extraction</a></h3>
+            <p class="authors"><strong>Yiran Zhao</strong>, Di Wu, Shuqi Dai, and Tong Li</p>
+            <p class="venue"><em>International Conference on Document Analysis and Recognition (ICDAR)</em>, 2024. Yiran Zhao and Di Wu contributed equally.</p>
+            <p class="work-links"><a href="https://github.com/AuroraZoer/DD-AGAT">Code</a></p>
+          </li>
+          <li>
+            <h3 class="work-title"><a href="https://doi.org/10.1007/978-981-97-5803-6_3">Network Analysis Reveals Regional Disparity in COVID-19 Policymaking</a></h3>
+            <p class="authors"><strong>Yiran Zhao</strong>, Pengfei Zhao, Tianyi Luo, Jiaojiao Wang, and Zhidong Cao</p>
+            <p class="venue"><em>China National Conference on Big Data and Social Computing (BDSC)</em>, 2024.</p>
+          </li>
+          <li>
+            <h3 class="work-title"><a href="https://doi.org/10.1142/S0218194024500049">A Novel Entity and Relation Joint Interaction Learning Approach for Entity Alignment</a></h3>
+            <p class="authors">Di Wu, Tong Li, <strong>Yiran Zhao</strong>, Junrui Liu, Zifang Tang, and Zhen Yang</p>
+            <p class="venue"><em>International Journal of Software Engineering and Knowledge Engineering</em>, 34(5), 821–843, 2024.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="patents">
+        <h2 id="patents">Patent Applications</h2>
+        <ul class="works">
+          <li>
+            <h3 class="work-title" lang="zh-CN"><a href="https://patents.google.com/patent/CN117454889A/zh">一种基于依存关系方向信息的关系抽取方法及系统</a></h3>
+            <p class="authors" lang="zh-CN">戴书琪、<strong>赵怡然</strong>、吴迪、李童</p>
+            <p class="venue">Chinese invention patent application. Application No. CN202311457068.8, published as CN117454889A in 2024.</p>
+          </li>
+        </ul>
+      </section>
+
+      <footer>Layout adapted from <a href="https://github.com/yaoyao-liu/minimal-light">Minimal Light</a>.</footer>
+    </main>
+  </div>
+</body>
+</html>
