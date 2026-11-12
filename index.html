@@ -97,7 +97,28 @@
     }
 
     section p { margin: 0; }
-    .education p + p { margin-top: 10px; }
+
+    .education-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .education-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .education-dates {
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
     .interests { margin: 0; padding-left: 1.3em; }
 
     .works {
@@ -111,6 +132,19 @@
     .works li + li {
       padding-top: 14px;
       border-top: 1px solid var(--rule);
+    }
+
+
+    .publication-label {
+      display: inline-block;
+      margin-bottom: 5px;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: #123b70;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1.35;
     }
 
     .work-title {
@@ -172,29 +206,47 @@
         </ul>
       </section>
 
-      <section class="education" aria-labelledby="education">
+      <section aria-labelledby="education">
         <h2 id="education">Education</h2>
-        <p><strong>Ph.D. student in Control Science and Engineering</strong><br>
-          Joint doctoral training at the <a href="https://english.ia.cas.cn/">Institute of Automation, Chinese Academy of Sciences</a>, and the <a href="https://sais.ucas.ac.cn/">School of Advanced Interdisciplinary Studies</a>, University of Chinese Academy of Sciences.</p>
-        <p><strong>Bachelor of Engineering (B.Eng.) in Software Engineering</strong><br>
-          Beijing University of Technology</p>
+        <ul class="education-list">
+          <li>
+            <div class="education-heading">
+              <strong>Ph.D. Student</strong>
+              <span class="education-dates"><time datetime="2025-09">Sep 2025</time> – Present</span>
+            </div>
+            <p><a href="https://english.ia.cas.cn/">Institute of Automation, Chinese Academy of Sciences</a></p>
+            <p>Control Science and Engineering</p>
+            <p>Joint doctoral training with the <a href="https://sais.ucas.ac.cn/">School of Advanced Interdisciplinary Studies</a>, University of Chinese Academy of Sciences.</p>
+          </li>
+          <li>
+            <div class="education-heading">
+              <strong>Bachelor of Engineering</strong>
+              <span class="education-dates"><time datetime="2021-09">Sep 2021</time> – <time datetime="2025-06">Jun 2025</time></span>
+            </div>
+            <p>Beijing University of Technology</p>
+            <p>Software Engineering</p>
+          </li>
+        </ul>
       </section>
 
       <section aria-labelledby="publications">
         <h2 id="publications">Publications</h2>
         <ul class="works">
           <li>
+            <span class="publication-label">ICDAR</span>
             <h3 class="work-title"><a href="https://doi.org/10.1007/978-3-031-70546-5_17">Integrating Dependency Type and Directionality into Adapted Graph Attention Networks to Enhance Relation Extraction</a></h3>
             <p class="authors"><strong>Yiran Zhao</strong>, Di Wu, Shuqi Dai, and Tong Li</p>
             <p class="venue"><em>International Conference on Document Analysis and Recognition (ICDAR)</em>, 2024.</p>
             <p class="work-links"><a href="https://github.com/AuroraZoer/DD-AGAT">Code</a></p>
           </li>
           <li>
+            <span class="publication-label">BDSC</span>
             <h3 class="work-title"><a href="https://doi.org/10.1007/978-981-97-5803-6_3">Network Analysis Reveals Regional Disparity in COVID-19 Policymaking</a></h3>
             <p class="authors"><strong>Yiran Zhao</strong>, Pengfei Zhao, Tianyi Luo, Jiaojiao Wang, and Zhidong Cao</p>
             <p class="venue"><em>China National Conference on Big Data and Social Computing (BDSC)</em>, 2024.</p>
           </li>
           <li>
+            <span class="publication-label">IJSEKE</span>
             <h3 class="work-title"><a href="https://doi.org/10.1142/S0218194024500049">A Novel Entity and Relation Joint Interaction Learning Approach for Entity Alignment</a></h3>
             <p class="authors">Di Wu, Tong Li, <strong>Yiran Zhao</strong>, Junrui Liu, Zifang Tang, and Zhen Yang</p>
             <p class="venue"><em>International Journal of Software Engineering and Knowledge Engineering</em>, 34(5), 821–843, 2024.</p>
