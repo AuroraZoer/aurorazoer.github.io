@@ -147,6 +147,54 @@
       line-height: 1.35;
     }
 
+
+    .publication-with-figure {
+      display: grid;
+      grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
+      align-items: start;
+      gap: 16px;
+    }
+
+    .publication-figure {
+      position: relative;
+      display: block;
+      padding: 24px 6px 6px;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      background: #fff;
+    }
+
+    .publication-figure-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      gap: 4px;
+    }
+
+    .publication-flow { grid-column: 1 / -1; }
+
+    .publication-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .publication-figure .publication-label {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      margin: 0;
+    }
+
+    @media (max-width: 520px) {
+      .publication-with-figure {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .publication-figure { max-width: 13rem; }
+    }
+
     .work-title {
       margin: 0 0 3px;
       font-size: 16px;
@@ -232,24 +280,47 @@
       <section aria-labelledby="publications">
         <h2 id="publications">Publications</h2>
         <ul class="works">
-          <li>
-            <span class="publication-label">ICDAR</span>
-            <h3 class="work-title"><a href="https://doi.org/10.1007/978-3-031-70546-5_17">Integrating Dependency Type and Directionality into Adapted Graph Attention Networks to Enhance Relation Extraction</a></h3>
-            <p class="authors"><strong>Yiran Zhao</strong>, Di Wu, Shuqi Dai, and Tong Li</p>
-            <p class="venue"><em>International Conference on Document Analysis and Recognition (ICDAR)</em>, 2024.</p>
-            <p class="work-links"><a href="https://github.com/AuroraZoer/DD-AGAT">Code</a></p>
+          <li class="publication-with-figure">
+            <a class="publication-figure" href="assets/dd-agat.png">
+              <img src="assets/dd-agat.png" width="1504" height="1241" loading="lazy" alt="DD-AGAT architecture for relation extraction">
+              <span class="publication-label">ICDAR</span>
+            </a>
+            <div>
+              <h3 class="work-title"><a href="https://doi.org/10.1007/978-3-031-70546-5_17">Integrating Dependency Type and Directionality into Adapted Graph Attention Networks to Enhance Relation Extraction</a></h3>
+              <p class="authors"><strong>Yiran Zhao</strong>, Di Wu, Shuqi Dai, and Tong Li</p>
+              <p class="venue"><em>International Conference on Document Analysis and Recognition (ICDAR)</em>, 2024.</p>
+              <p class="work-links"><a href="https://github.com/AuroraZoer/DD-AGAT">Code</a></p>
+            </div>
           </li>
-          <li>
-            <span class="publication-label">BDSC</span>
-            <h3 class="work-title"><a href="https://doi.org/10.1007/978-981-97-5803-6_3">Network Analysis Reveals Regional Disparity in COVID-19 Policymaking</a></h3>
-            <p class="authors"><strong>Yiran Zhao</strong>, Pengfei Zhao, Tianyi Luo, Jiaojiao Wang, and Zhidong Cao</p>
-            <p class="venue"><em>China National Conference on Big Data and Social Computing (BDSC)</em>, 2024.</p>
+          <li class="publication-with-figure">
+            <div class="publication-figure publication-figure-grid">
+              <span class="publication-label">BDSC</span>
+              <a class="publication-flow" href="assets/bdsc-flow.png">
+                <img src="assets/bdsc-flow.png" width="1491" height="117" loading="lazy" alt="BDSC policy network analysis workflow">
+              </a>
+              <a href="assets/bdsc-network-left.png">
+                <img src="assets/bdsc-network-left.png" width="829" height="828" loading="lazy" alt="First BDSC policy keyword network">
+              </a>
+              <a href="assets/bdsc-network-right.png">
+                <img src="assets/bdsc-network-right.png" width="1024" height="1024" loading="lazy" alt="Second BDSC policy keyword network">
+              </a>
+            </div>
+            <div>
+              <h3 class="work-title"><a href="https://doi.org/10.1007/978-981-97-5803-6_3">Network Analysis Reveals Regional Disparity in COVID-19 Policymaking</a></h3>
+              <p class="authors"><strong>Yiran Zhao</strong>, Pengfei Zhao, Tianyi Luo, Jiaojiao Wang, and Zhidong Cao</p>
+              <p class="venue"><em>China National Conference on Big Data and Social Computing (BDSC)</em>, 2024.</p>
+            </div>
           </li>
-          <li>
-            <span class="publication-label">IJSEKE</span>
-            <h3 class="work-title"><a href="https://doi.org/10.1142/S0218194024500049">A Novel Entity and Relation Joint Interaction Learning Approach for Entity Alignment</a></h3>
-            <p class="authors">Di Wu, Tong Li, <strong>Yiran Zhao</strong>, Junrui Liu, Zifang Tang, and Zhen Yang</p>
-            <p class="venue"><em>International Journal of Software Engineering and Knowledge Engineering</em>, 34(5), 821–843, 2024.</p>
+          <li class="publication-with-figure">
+            <a class="publication-figure" href="assets/ijseke-eril.jpg">
+              <img src="assets/ijseke-eril.jpg" width="1532" height="663" loading="lazy" alt="ERIL architecture for entity and relation alignment">
+              <span class="publication-label">IJSEKE</span>
+            </a>
+            <div>
+              <h3 class="work-title"><a href="https://doi.org/10.1142/S0218194024500049">A Novel Entity and Relation Joint Interaction Learning Approach for Entity Alignment</a></h3>
+              <p class="authors">Di Wu, Tong Li, <strong>Yiran Zhao</strong>, Junrui Liu, Zifang Tang, and Zhen Yang</p>
+              <p class="venue"><em>International Journal of Software Engineering and Knowledge Engineering</em>, 34(5), 821–843, 2024.</p>
+            </div>
           </li>
         </ul>
       </section>
