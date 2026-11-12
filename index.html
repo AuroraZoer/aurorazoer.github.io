@@ -157,27 +157,33 @@
 
     .publication-figure {
       position: relative;
-      display: block;
-      padding: 24px 6px 6px;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr);
+      aspect-ratio: 6 / 5;
+      padding: 27px 6px 6px;
       border: 1px solid var(--rule);
       border-radius: 6px;
       background: #fff;
     }
 
     .publication-figure-grid {
-      display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      align-items: start;
+      grid-template-rows: auto minmax(0, 1fr);
       gap: 4px;
     }
 
+    .publication-figure-grid a { min-height: 0; }
     .publication-flow { grid-column: 1 / -1; }
 
     .publication-figure img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      min-height: 0;
+      object-fit: contain;
     }
+
+    .publication-flow img { height: auto; }
 
     .publication-figure .publication-label {
       position: absolute;
@@ -232,9 +238,10 @@
       <h1>Yiran Zhao</h1>
       <p class="name-local" lang="zh-CN">赵怡然</p>
       <p class="role">Ph.D. Student</p>
-      <p class="affiliation"><a href="https://english.ucas.ac.cn/">University of Chinese Academy of Sciences</a></p>
+      <p class="affiliation"><a href="http://www.ia.cas.cn/">Institute of Automation, Chinese Academy of Sciences</a></p>
       <nav class="profile-links" aria-label="Academic profiles">
         <a href="https://github.com/AuroraZoer">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=U5EqacoAAAAJ&amp;hl=zh-CN">Google Scholar</a>
         <a href="https://orcid.org/0000-0002-7838-3457">ORCID</a>
       </nav>
     </header>
@@ -262,9 +269,9 @@
               <strong>Ph.D. Student</strong>
               <span class="education-dates"><time datetime="2025-09">Sep 2025</time> – Present</span>
             </div>
-            <p><a href="https://english.ia.cas.cn/">Institute of Automation, Chinese Academy of Sciences</a></p>
+            <p><a href="http://www.ia.cas.cn/">Institute of Automation, Chinese Academy of Sciences</a></p>
             <p>Control Science and Engineering</p>
-            <p>Joint doctoral training with the <a href="https://sais.ucas.ac.cn/">School of Advanced Interdisciplinary Studies</a>, University of Chinese Academy of Sciences.</p>
+            <p>Joint doctoral training with the <a href="https://sais.ucas.ac.cn/">School of Advanced Interdisciplinary Studies</a>, <a href="https://www.ucas.edu.cn/">University of Chinese Academy of Sciences</a>.</p>
           </li>
           <li>
             <div class="education-heading">
