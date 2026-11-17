@@ -98,6 +98,8 @@
 
     section p { margin: 0; }
 
+    .about p + p { margin-top: 0.75em; }
+
     .education-list {
       display: grid;
       gap: 12px;
@@ -245,9 +247,10 @@
     </header>
 
     <main>
-      <section aria-labelledby="about">
+      <section class="about" aria-labelledby="about">
         <h2 id="about">About Me</h2>
-        <p>My research lies at the intersection of natural language processing and neurocognitive science. I currently study digital twins of the brain. I am a Ph.D. student at the Institute of Automation, Chinese Academy of Sciences.</p>
+        <p>My research lies at the intersection of natural language processing and neurocognitive science. I am interested in using language models and neuroimaging data to understand how the brain represents and processes language.</p>
+        <p>I currently study digital twins of the brain and how they might capture individual differences in neural responses to language. I am also interested in model interpretability, particularly in identifying which learned representations contribute to predictions of brain activity. I am a Ph.D. student at the Institute of Automation, Chinese Academy of Sciences.</p>
       </section>
 
       <section aria-labelledby="education">
